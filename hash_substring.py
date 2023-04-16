@@ -7,7 +7,7 @@ def read_input():
     elif 'F' in input_type:
         file_name = '06'
 
-        with open(f'test/{file_name}', 'r', encoding='utf-8') as file:
+        with open(f'tests/{file_name}', 'r', encoding='utf-8') as file:
             return (file.readline().rstrip(), file.readline().rstrip())
 
     else:
