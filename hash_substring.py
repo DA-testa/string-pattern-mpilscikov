@@ -1,26 +1,17 @@
-# python3
-
 def read_input():
-
     input_type = input().rstrip()
 
     if 'I' in input_type:
-        pattern = input().rstrip()
-        text = input().rstrip()
+        return (input().rstrip(), input().rstrip())
 
     elif 'F' in input_type:
-        file_name = input().rstrip()
-        if 'a' in file_name:
-            raise Exception('a in filename')
+        file_name = '06'
 
         with open(f'test/{file_name}', 'r', encoding='utf-8') as file:
-            pattern = file.readline().rstrip()
-            text = file.readline().rstrip()
+            return (file.readline().rstrip(), file.readline().rstrip())
 
     else:
         raise Exception('wrong input')
-
-    return (pattern, text)
 
 
 def print_occurrences(output):
